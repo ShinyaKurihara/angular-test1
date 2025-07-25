@@ -1,0 +1,12 @@
+# 出力ディレクトリ
+dist/
+coverage/
+
+# 依存関係
+node_modules/
+
+# Angular特有のもの
+.angular/
+
+# 環境設定ファイル
+package-lock.json
