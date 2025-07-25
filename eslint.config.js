@@ -43,17 +43,17 @@ module.exports = tseslint.config(
   {
     ignores: [
       // 出力ディレクトリ
-      'dist/**',
-      'coverage/**',
+      "dist/**",
+      "coverage/**",
 
       // 依存関係
-      'node_modules/**',
+      "node_modules/**",
 
       // Angular特有のもの
-      '.angular/**',
+      ".angular/**",
 
       // 環境設定ファイル
-      'package-lock.json'
+      "package-lock.json",
     ],
-  }
+  },
 );

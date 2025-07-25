@@ -1,0 +1,26 @@
+<h2>Post List</h2>
+
+<form [formGroup]="form">
+  キーワード: <input formControlName="keyword" /><br>
+  タグ: <input formControlName="tag" />
+</form>
+
+<hr>
+<div>
+  <button (click)="prevPage()" [disabled]="currentPage === 1">前へ</button>
+  <span>Page {{ currentPage }}</span>
+  <button (click)="nextPage()">次へ</button>
+</div>
+<hr>
+<h3>表示件数: {{ posts.length }}</h3>
+<div *ngFor="let post of posts">
+  <h4>{{ post.title }}</h4>
+  <p>{{ post.body }}</p>
+  <hr />
+</div>
+<hr>
+<div>
+  <button (click)="prevPage()" [disabled]="currentPage === 1">前へ</button>
+  <span>Page {{ currentPage }}</span>
+  <button (click)="nextPage()">次へ</button>
+</div>

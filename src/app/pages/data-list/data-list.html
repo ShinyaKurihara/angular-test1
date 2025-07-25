@@ -1,0 +1,18 @@
+<h2>Post List</h2>
+
+<form [formGroup]="searchForm">
+  ワード検索：<input type="text" placeholder="input word" formControlName="wordSearchWord"><br>
+  タグ検索：<!--<input type="text" placeholder="input word" formControlName="tagSearchWord">--><br>
+
+    <select formControlName="tagSearchWord">
+    <option value="">-- タグを選択 --</option>
+    <option *ngFor="let tag of tags" [value]="tag.slug">{{ tag.name }}</option>
+  </select>
+</form>
+
+<h3>検索結果：{{ posts.length }} 件</h3>
+<div *ngFor="let post of posts">
+  <h4>{{ post.title }}</h4>
+  <p>{{ post.body }}</p>
+  <hr />
+</div>
